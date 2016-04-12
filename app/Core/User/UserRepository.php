@@ -23,12 +23,12 @@ use App\Core\Contracts\BaseRepositoryInterface;
 
 class UserRepository implements BaseRepositoryInterface
 {
-    private $model;
-
-    public function __construct(User $model)
-    {
-        $this->model = $model;
-    }
+//    private $model;
+//
+//    public function __construct(User $model)
+//    {
+//        $this->model = $model;
+//    }
 
     public function create(array $attributes)
     {
