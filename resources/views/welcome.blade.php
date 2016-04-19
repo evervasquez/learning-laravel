@@ -1,72 +1,46 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title>App</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Learning-Laravel | Login</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
-    <div class="container">
+	<head>
+		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
-        <!-- The justified navigation menu is meant for single line per list item.
-             Multiple lines will require custom code not provided by Bootstrap. -->
-        <div class="masthead">
-            <h3 class="text-muted">Project name</h3>
-            <nav>
-                <ul class="nav nav-justified">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Downloads</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				color: #B0BEC5;
+				display: table;
+				font-weight: 100;
+				font-family: 'Lato';
+			}
 
-        <!-- Jumbotron -->
-        <div class="jumbotron">
-            <h1>Marketing stuff!</h1>
-            <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
-            <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
-        </div>
+			.container {
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+			}
 
-        <!-- Example row of columns -->
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                <h2>Safari bug warning!</h2>
-                <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-                <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-                <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-            </div>
-        </div>
+			.content {
+				text-align: center;
+				display: inline-block;
+			}
 
-        <!-- Site footer -->
-        <footer class="footer">
-            <p>&copy; 2015 Company, Inc.</p>
-        </footer>
+			.title {
+				font-size: 96px;
+				margin-bottom: 40px;
+			}
 
-    </div> <!-- /container -->
-
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    </body>
+			.quote {
+				font-size: 24px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<div class="title">Laravel 5</div>
+				<div class="quote">{{ Inspiring::quote() }}</div>
+			</div>
+		</div>
+	</body>
 </html>
