@@ -378,3 +378,7 @@
 127.0.0.1 - - [19/Apr/2016:15:53:30 -0500] "GET /css/bootstrap.min.css HTTP/1.1" 304 -
 127.0.0.1 - - [19/Apr/2016:15:53:30 -0500] "GET /assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 17167
 127.0.0.1 - - [19/Apr/2016:15:53:30 -0500] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [26/Apr/2016:14:09:06 -0500] "GET / HTTP/1.1" 200 3919
+127.0.0.1 - - [26/Apr/2016:14:09:07 -0500] "GET /css/bootstrap.min.css HTTP/1.1" 200 122540
+127.0.0.1 - - [26/Apr/2016:14:09:07 -0500] "GET /assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 17167
+127.0.0.1 - - [26/Apr/2016:14:09:07 -0500] "GET /favicon.ico HTTP/1.1" 200 -
