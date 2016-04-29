@@ -1,9 +1,8 @@
 <?php
 
+//composer dumpautoload
 
-Route::get('/', function(){
-    return View('welcome');
-});
+Route::get('/', 'PageController@index');
 
 Route::get('/login', function () {
     return view('layouts/login');

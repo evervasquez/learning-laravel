@@ -22,23 +22,48 @@ namespace App\Core\Category;
 
 use App\Core\Contracts\BaseRepositoryInterface;
 
-class CategoryRepository implements  BaseRepositoryInterface
+/**
+ * Class CategoryRepository
+ * @package App\Core\Category
+ */
+class CategoryRepository implements BaseRepositoryInterface
 {
+    /**
+     * @return \Illuminate\Database\Eloquent\Collection|static[]
+     */
+    public function all()
+    {
+        return Category::all();
+    }
+
+    /**
+     * @param array $attributes
+     */
     public function create(array $attributes)
     {
         // TODO: Implement create() method.
     }
 
+    /**
+     * @param $id
+     * @param array $attributes
+     */
     public function updated($id, array $attributes)
     {
         // TODO: Implement updated() method.
     }
 
+    /**
+     * @param $id
+     */
     public function find($id)
     {
         // TODO: Implement find() method.
     }
 
+    /**
+     * @param $id
+     */
     public function deleted($id)
     {
         // TODO: Implement deleted() method.

@@ -26,6 +26,10 @@ namespace App\Core\Contracts;
 interface BaseRepositoryInterface
 {
     /**
+     * @return mixed
+     */
+    public function all();
+    /**
      * @param array $attributes
      * @return mixed
      */
