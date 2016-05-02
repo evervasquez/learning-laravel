@@ -73,7 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header">
     <div class="container">
         <div class="logo">
-            <a href="index.html"><span>Re</span>sale</a>
+            <a href="/"><span>Re</span>sale</a>
         </div>
         <div class="header-right">
             <a class="account" href="login.html">My Account</a>
@@ -492,7 +492,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             @foreach($categories  as $category)
                 <div class="col-md-2 focus-grid">
-                    <a href="categories.html">
+                    <a href="categories/{{$category->id}}">
                         <div class="focus-border">
                             <div class="focus-layout">
                                 <div class="focus-image"><i class="{{$category->icon}}"></i></div>
@@ -750,7 +750,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-bottom text-center">
         <div class="container">
             <div class="footer-logo">
-                <a href="index.html"><span>Re</span>sale</a>
+                <a href="/"><span>Re</span>sale</a>
             </div>
             <div class="footer-social-icons">
                 <ul>

@@ -3,11 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Core\Category\CategoryRepository;
+use App\Core\Product\ProductRepository;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+    protected $repoCategory;
+    protected $repoProduct;
+
+    public function __construct()
+    {
+        $this->repoCategory = new CategoryRepository();
+        $this->repoProduct = new ProductRepository();
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -15,9 +26,16 @@ class PageController extends Controller
      */
     public function index()
     {
-        $category = new CategoryRepository();
-        $categories = $category->all();
+        $categories = $this->repoCategory->all();
         return view('layouts/default', compact('categories'));
+    }
+
+    public function categories($id)
+    {
+        $category_id = $id;
+        $categories = $this->repoCategory->all();
+        $products = $this->repoProduct->getProductsByCategoryId($category_id);
+        return view('categories', compact('category_id', 'categories', 'products'));
     }
 
     /**

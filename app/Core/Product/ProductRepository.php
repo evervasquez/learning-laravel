@@ -24,6 +24,11 @@ use App\Core\Contracts\BaseRepositoryInterface;
 
 class ProductRepository implements BaseRepositoryInterface
 {
+    public function all()
+    {
+        // TODO: Implement all() method.
+    }
+
     public function create(array $attributes)
     {
         // TODO: Implement create() method.
@@ -44,4 +49,8 @@ class ProductRepository implements BaseRepositoryInterface
         // TODO: Implement deleted() method.
     }
 
+    public function getProductsByCategoryId($category_id){
+
+        return Product::where('category_id', $category_id)->paginate(20);
+    }
 }
