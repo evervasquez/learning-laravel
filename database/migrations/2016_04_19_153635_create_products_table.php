@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->integer('category_id')->unsigned();
             $table->string('code', 15);
             $table->string('name');
+            $table->string('slug');
             $table->decimal('price', 5, 2);
             $table->integer('stock');
             $table->tinyInteger('condition')->comment('1=nuevo, 2=usado');

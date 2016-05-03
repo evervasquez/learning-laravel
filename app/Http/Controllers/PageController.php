@@ -34,6 +34,7 @@ class PageController extends Controller
     {
         $category_id = $id;
         $categories = $this->repoCategory->all();
+        dd($this->repoCategory->getCountProductByCategory());
         $products = $this->repoProduct->getProductsByCategoryId($category_id);
         return view('categories', compact('category_id', 'categories', 'products'));
     }
