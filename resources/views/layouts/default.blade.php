@@ -492,7 +492,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             @foreach($categories  as $category)
                 <div class="col-md-2 focus-grid">
-                    <a href="categories/{{$category->id}}">
+                    <a href="categories/{{$category->slug}}">
                         <div class="focus-border">
                             <div class="focus-layout">
                                 <div class="focus-image"><i class="{{$category->icon}}"></i></div>

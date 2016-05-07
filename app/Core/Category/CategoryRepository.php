@@ -70,9 +70,9 @@ class CategoryRepository implements BaseRepositoryInterface
     }
 
     public function getCountProductByCategory(){
-        $categories = Category::join("products", "categories.id", "=", "products.category_id")
-                ->select("categories.id", "categories.name", "count()")
-                    ->get()->toArray();
-        return $categories;
+//        $categories = Category::join("products", "categories.id", "=", "products.category_id")
+//                ->select("categories.id", "categories.name", "count()")
+//                    ->get()->toArray();
+//        return $categories;
     }
 }

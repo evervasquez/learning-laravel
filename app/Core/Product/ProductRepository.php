@@ -49,8 +49,11 @@ class ProductRepository implements BaseRepositoryInterface
         // TODO: Implement deleted() method.
     }
 
-    public function getProductsByCategoryId($category_id){
-
-        return Product::where('category_id', $category_id)->paginate(20);
+    public function getProductsByCategoryId($slug)
+    {
+        $result = Product::whereHas('category', function ($query) use ($slug) {
+            $query->where('slug', $slug);
+        })->paginate(20);
+        return $result;
     }
 }

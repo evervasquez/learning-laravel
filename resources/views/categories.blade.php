@@ -899,7 +899,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <select class="selectpicker show-tick" data-live-search="true">
                     <option data-tokens="All">All</option>
                     @foreach($categories as $category)
-                        @if($category->id == $category_id)
+                        @if($category->slug == $slug)
                             <option selected data-tokens="{{$category->name}}">{{$category->name}}</option>
                         @else
                             <option data-tokens="{{$category->name}}">{{$category->name}}</option>
