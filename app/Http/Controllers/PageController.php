@@ -32,10 +32,9 @@ class PageController extends Controller
 
     public function categories($slug)
     {
-        $categories = $this->repoCategory->all();
-//        dd($this->repoCategory->getCountProductByCategory());
+        $total_categories = $this->repoCategory->getCountProductByCategory();
         $products = $this->repoProduct->getProductsByCategoryId($slug);
-        return view('categories', compact('slug', 'categories', 'products'));
+        return view('categories', compact('slug', 'products', 'total_categories'));
     }
 
     /**

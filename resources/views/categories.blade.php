@@ -898,7 +898,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <label>Buscar categorías</label>
                 <select class="selectpicker show-tick" data-live-search="true">
                     <option data-tokens="All">All</option>
-                    @foreach($categories as $category)
+                    @foreach($total_categories as $category)
                         @if($category->slug == $slug)
                             <option selected data-tokens="{{$category->name}}">{{$category->name}}</option>
                         @else
@@ -926,17 +926,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div class="all-categories">
             <h3> Select your category and find the perfect ad</h3>
+
             <ul class="all-cat-list">
-                <li><a href="mobiles.html">Mobiles <span class="num-of-ads">(5,78,076)</span></a></li>
-                <li><a href="electronics-appliances.html">Electronics & Appliances  <span class="num-of-ads">(3,66,495)</span></a></li>
-                <li><a href="real-estate.html">Real Estate  <span class="num-of-ads">(45,450)</span></a></li>
-                <li><a href="furnitures.html">Furniture    <span class="num-of-ads">(1,77,145)</span></a></li>
-                <li><a href="pets.html">Pets   <span class="num-of-ads">(1,81,250)</span></a></li>
-                <li><a href="books-sports-hobbies.html">Books, Sports & Hobbies    <span class="num-of-ads">(66,822)</span></a></li>
-                <li><a href="fashion.html">Fashion   <span class="num-of-ads">(29,156)</span></a></li>
-                <li><a href="kids.html">Kids   <span class="num-of-ads">(25,699)</span></a></li>
-                <li><a href="services.html">Services   <span class="num-of-ads">(2,15,895)</span></a></li>
-                <li><a href="cars.html">Cars   <span class="num-of-ads">(2,15,306)</span></a></li>
+                @foreach($total_categories as $category)
+                    <li><a href="#">{{$category->name}} <span class="num-of-ads">({{$category->total}})</span></a></li>
+                @endforeach
             </ul>
         </div>
         <ol class="breadcrumb" style="margin-bottom: 5px;">

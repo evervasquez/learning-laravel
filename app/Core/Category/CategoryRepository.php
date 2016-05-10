@@ -18,7 +18,7 @@
  */
 
 namespace App\Core\Category;
-
+use DB;
 
 use App\Core\Contracts\BaseRepositoryInterface;
 
@@ -70,9 +70,11 @@ class CategoryRepository implements BaseRepositoryInterface
     }
 
     public function getCountProductByCategory(){
-//        $categories = Category::join("products", "categories.id", "=", "products.category_id")
-//                ->select("categories.id", "categories.name", "count()")
-//                    ->get()->toArray();
-//        return $categories;
+        $categories = Category::join("products", "categories.id", "=", "products.category_id")
+            ->distinct()
+            ->select(DB::raw("categories.id as xid"), "categories.name", "categories.slug",
+                DB::raw('(SELECT COUNT(*) FROM products where category_id=xid) as total'))
+            ->get();
+        return $categories;
     }
 }
